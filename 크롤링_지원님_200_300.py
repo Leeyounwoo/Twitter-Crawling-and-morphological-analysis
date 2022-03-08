@@ -1,6 +1,7 @@
 from datetime import date, timedelta
 import twint
 import csv
+import time
 
 
 # 크롤링 날짜 지정
@@ -30,7 +31,7 @@ column_name = ramen_data[0]
 ramen_names = []
 keys = []
 # 제품 개수
-for line in ramen_data[350:400]:
+for line in ramen_data[200:300]:
     ramen_names.append(line[3])
     keys.append(line[11])
 
