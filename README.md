@@ -16,4 +16,24 @@
    > pip uninstall twint
    > pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 
-   
+4. 크롤링 성공 확인
+
+   - 트윗 데이터가 없는 경우
+
+     ![image-20220309154454807](README.assets/image-20220309154454807.png)
+
+   - 트윗 데이터가 있는 경우
+
+     - 터미널
+
+       ![image-20220309154518749](README.assets/image-20220309154518749.png)
+
+     - 디렉토리 구조
+
+       ![image-20220309154612528](README.assets/image-20220309154612528.png)
+
+       - csv 파일 내부
+
+         ![image-20220309154712001](README.assets/image-20220309154712001.png)
+
+       
