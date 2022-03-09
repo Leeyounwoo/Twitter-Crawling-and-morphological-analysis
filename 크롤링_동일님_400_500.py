@@ -48,13 +48,13 @@ for idx1 in range(len(ramen_names)):
         c.Store_csv = True
         c.Output = "none"
         c.Output = filename
-        time.sleep(2)
+        # time.sleep(2)
         while True:
             flag = False
             try:
                 twint.run.Search(c)
             except twint.token.RefreshTokenException:
-                time.sleep(2)
+                # time.sleep(2)
                 print('RefreshTokenException')
                 flag = True
             
