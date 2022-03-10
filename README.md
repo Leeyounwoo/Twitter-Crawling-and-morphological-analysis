@@ -2,7 +2,7 @@
 
 1. git clone https://github.com/Leeyounwoo/Twitter-Crawling-and-morphological-analysis.git
 
-2. pip install requirements.txt
+2. pip install -r requirements.txt
 
 3. 크롤링_${본인이름}.py 실행
 
@@ -13,7 +13,8 @@
 
    위와 같은 오류 발생시, twint 2.1.21 설치 필요 
 
-   > pip uninstall twint
+   > pip3 uninstall twint<br>
+   >
    > pip3 install --user --upgrade git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 
 4. 크롤링 성공 확인
