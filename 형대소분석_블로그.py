@@ -152,12 +152,14 @@ for ramen_index in range(len(ramen_names)):
             no_crawling.append(ramen_names[ramen_index])        
         # txt: O, data: O
         else:
+            # 블로그 글 안에서 맛 관련 단어가 있는 경우에만 (cnt + 1)
+            flag = False
             for text in texts:
-                if text[0] == '=':
+                if text[0] == '=' and flag:
                     ramen_result[ramen_id[ramen_index]]['blog_cnt'] += 1
                     ramen_result[ramen_id[ramen_index]]['crawling_cnt'] += 1
-                else:
                     flag = False
+                else:
                     for taste_key_index in range(len(taste_list)):
                         taste_cnt = 0
                         for taste in taste_dict[taste_list[taste_key_index]]:
@@ -177,7 +179,7 @@ for ramen_index in range(len(ramen_names)):
         no_txt.append(ramen_names[ramen_index])
 
 
-with open('Ramen_taste.json', 'w', encoding='utf-8') as f:
+with open('Ramen_blog.json', 'w', encoding='utf-8') as f:
     json.dump(ramen_result, f, indent=4)
 
 
