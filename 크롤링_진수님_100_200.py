@@ -32,9 +32,11 @@ ramen_names = []
 keys = []
 # 제품 개수
 for line in ramen_data[100:200]:
-    ramen_names.append(line[3])
-    keys.append(line[11])
+    if line[3] != line[4]:
+        ramen_names.append(line[4])
+        keys.append(line[11])
 
+print(len(ramen_names))
 ramen_result = {key: {} for key in keys}
 
 for idx1 in range(len(ramen_names)):

@@ -32,8 +32,9 @@ ramen_names = []
 keys = []
 # 제품 개수
 for line in ramen_data[400:]:
-    ramen_names.append(line[3])
-    keys.append(line[11])
+    if line[3] != line[4]:
+        ramen_names.append(line[4])
+        keys.append(line[11])
 
 ramen_result = {key: {} for key in keys}
 
