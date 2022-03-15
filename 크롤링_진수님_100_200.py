@@ -2,6 +2,8 @@ from datetime import date, timedelta
 import twint
 import csv
 import time
+import os.path
+
 
 
 # 크롤링 날짜 지정
@@ -32,7 +34,8 @@ ramen_names = []
 keys = []
 # 제품 개수
 for line in ramen_data[100:200]:
-    if line[3] != line[4]:
+    if line[3] != line[4] and not os.path.isfile(line[4]+'_2016_0101_2021_1231.csv'):
+        print(line[4]+'_2016_0101_2021_1231.csv')
         ramen_names.append(line[4])
         keys.append(line[11])
 
