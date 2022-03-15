@@ -73,9 +73,9 @@ ramen_names = []
 ramen_nicknames = []
 # 제품 개수
 for line in ramen_data:
-    ramen_id.append(line[11])
+    ramen_id.append(line[12])
     ramen_names.append(line[2])
-    ramen_nicknames.append(line[3])
+    ramen_nicknames.append(line[4])
 
 with open('Ramen_blog.json', 'r') as f:
     ramen_result = json.load(f)
